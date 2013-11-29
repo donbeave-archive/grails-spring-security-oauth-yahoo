@@ -18,10 +18,11 @@ package grails.plugin.springsecurity.oauth
 import org.scribe.model.Token
 
 /**
- * OAuth authentication token for Google users. It's a standard {@link OAuthToken}
+ * OAuth authentication token for Yahoo users. It's a standard {@link OAuthToken}
  * that returns the Yahoo email address as the principal.
  *
- * @author Mihai CAZACU(cazacugmihai@gmail.com)
+ * @author <a href='mailto:cazacugmihai@gmail.com'>Mihai Cazacu</a>
+ * @author Thierry Nicola
  */
 class YahooOAuthToken extends OAuthToken {
 
@@ -36,6 +37,10 @@ class YahooOAuthToken extends OAuthToken {
     }
 
     String getSocialId() {
+        return profile.guid
+    }
+
+    String getScreenName() {
         return profile.guid
     }
 
