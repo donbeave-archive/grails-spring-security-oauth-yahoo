@@ -1,4 +1,4 @@
-grails-spring-security-oauth-yahoo
+grails-spring-security-oauth-yahoo [![Build Status](https://api.travis-ci.org/donbeave/grails-spring-security-oauth-yahoo.png?branch=master)](https://travis-ci.org/donbeave/grails-spring-security-oauth-yahoo)
 ====================================
 
 Yahoo extension for [Grails Spring Security OAuth][spring-security-oauth-plugin] plugin
