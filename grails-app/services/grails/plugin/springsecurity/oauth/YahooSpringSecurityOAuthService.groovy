@@ -16,19 +16,17 @@
 package grails.plugin.springsecurity.oauth
 
 import grails.converters.JSON
-import org.scribe.model.Verb
-import org.scribe.model.OAuthRequest
 
 /**
- * @author Mihai CAZACU(cazacugmihai@gmail.com)
+ * @author <a href='mailto:cazacugmihai@gmail.com'>Mihai Cazacu</a>
+ * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
  */
 class YahooSpringSecurityOAuthService {
 
     def oauthService
 
     def createAuthToken(accessToken) {
-        // Requires scope of "https://www.googleapis.com/auth/userinfo.email"
-        def response = oauthService.getYahooResource(accessToken, "http://social.yahooapis.com/v1/me/guid?format=json")
+        def response = oauthService.getYahooResource(accessToken, 'http://social.yahooapis.com/v1/me/guid?format=json')
         def responseAsJson = JSON.parse(response.body)
         def guid = responseAsJson.guid.value
 

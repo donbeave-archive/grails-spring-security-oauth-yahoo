@@ -26,7 +26,7 @@ import org.scribe.model.Token
  */
 class YahooOAuthToken extends OAuthToken {
 
-    public static final String PROVIDER_NAME = "yahoo"
+    public static final String PROVIDER_NAME = 'yahoo'
 
     Map profile
 
